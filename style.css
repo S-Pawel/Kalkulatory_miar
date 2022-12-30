@@ -1,0 +1,134 @@
+body
+{
+    margin: 0;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    font-smooth: always;
+
+}
+header
+{
+    text-align: center;
+}
+    header > h1 
+    {
+        font-size: 50px;
+        font-style: BlinkMacSystemFont;
+    }
+nav
+{
+    display: block ;
+    text-align: center;
+    background-color: #4e4e4e;
+    font-size: 100%;
+    border-top: 2px solid #858585;
+    border-bottom: 2px solid #858585;
+}
+.menu
+{
+    display: inline-block;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    padding-top: 10px ;
+    padding-bottom: 10px ;
+    
+}
+        .menu:hover
+        {
+            background-color: #cdcdcd;
+            color: #1b1b1b;
+            cursor: pointer;
+            transition: 1s;
+        }
+.window
+{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    display: inline-block;
+    height: 60vh;
+    width: 80vw;
+    text-align: center;
+    font-size: 18px;
+}
+.list
+{
+    
+    display: block; 
+    text-align: center;
+    width: 10vw;
+    float: left;
+    height: auto;
+    border-right: 2px solid #858585;
+}
+        .button
+        {
+            padding: 10px;
+        }   
+                .button:first-child
+                {
+                    padding-top: 50px;
+                }
+                .button:hover
+                {
+                    background-color: #cdcdcd;
+                    color: #1b1b1b;
+                    cursor: pointer;
+                    transition: 1s;
+                }
+.main
+{
+    display: block;
+    text-align: center;
+    float: left;
+    width: 65vw;
+    height: auto;
+    
+}
+        .main input
+        {
+        width: 180px;
+        height: 30px;
+        text-align: right;
+        border-radius: none;
+        background-color: #fff;
+        color: #1b1b1b;
+        border:none;
+        font-size: 22px;
+        border-radius: 15px;
+        padding-right: 25px;
+        }
+        .main button
+        {
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            background-color: #1b1b1b;
+            margin-left: 20px;
+            border: 1px solid #cdcdcd;
+            color: #cdcdcd;
+            transition: 0.3s;
+            font-size: 22px;
+            border-radius: 15px;
+        }
+                .main button:hover
+                {  
+                    background-color: #cdcdcd;
+                    color: #1b1b1b;
+                    border: 1px solid #1b1b1b;
+                    cursor: pointer; 
+                    transition: 0.5s; 
+        }
+
+footer
+{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-right: 2vw;
+}

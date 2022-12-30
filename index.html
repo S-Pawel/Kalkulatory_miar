@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator miar online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!--Website style inspired from MDN Web Docs in dark style. Work in progress -->
+
+</head>
+<body>
+        <header>
+                <h1>Kalkulator miar online</h1>
+            <nav>
+                <div class="menu">Temperatura</div>
+                <div class="menu">Prędkość</div>
+                <div class="menu">Waga</div>
+                <div class="menu">Długość</div>
+                <div class="menu">Powierzchnia</div>
+            
+
+            </nav>
+        </header>
+        <div class="window">
+            <div class="list">Lista <br>dostępnych konwersji<br> <br>
+
+                <div class="button" id="button1">Celsjusze na Fahrenheity</div>
+                <div class="button" id="button2">Fahrenheity na Celsjusze</div>
+                <div class="button" id="button3">Celsjusze na Kelwiny</div>
+                <div class="button" id="button4">Kelwiny na Celsjusze</div>
+                <div class="button" id="button5">Fahrenheity na Kelwiny</div>
+                <div class="button" id="button6">Kelwiny na Fahrenheity</div>
+            </div>
+            <div class="main"> 
+                <h2>Konwertowanie z <span class="one">_ _ _ _ _ _</span> na <span class="two">
+                    _ _ _ _ _ _ </span> </h2> 
+                <br> <br>Podaj liczbę stopni: <br><br>
+                    <input type="number" id="conNumber" placeholder="Wpisz liczbę">
+                    <button class="conv">OBLICZ</button>
+                    <br><br> Twój wynik to: <br>
+                    <h2 class="result">Najpierw wybierz jednostki</h2><br><br>
+
+            
+            
+            
+            </div>
+        </div>
+
+
+        <div style="clear: both"></div>
+    <footer>
+         Strona stworzona przez <a>S-Pawel</a> ©Wszelkie prawa zastrzeżone
+    </footer>
+
+    <script src="script.js">   </script>
+
+</body>
+</html>
