@@ -4,21 +4,53 @@ const result = document.querySelector('.result')
 
 const one = document.querySelector('.one')
 const two = document.querySelector('.two')
+const buttonClass = document.querySelectorAll('.button')
+const listInnerClass = document.querySelector('#listInner')
 
-let lButton1 = document.querySelector('#button1')
-    let lButton2 = document.querySelector('#button2')
-let lButton3 = document.querySelector('#button3')
-    let lButton4 = document.querySelector('#button4')
-let lButton5 = document.querySelector('#button5')
-    let lButton6 = document.querySelector('#button6')
+let buttonNav1 = document.querySelector('#buttonNav1')
+    let buttonNav2 = document.querySelector('#buttonNav2')
+let buttonNav3 = document.querySelector('#buttonNav3')
+    let buttonNav4 = document.querySelector('#buttonNav4')
+let buttonNav5 = document.querySelector('#buttonNav5')
+
+let lButtonTemp1 = document.querySelector('#buttonTemp1')
+    let lButtonTemp2 = document.querySelector('#buttonTemp2')
+let lButtonTemp3 = document.querySelector('#buttonTemp3')
+    let lButtonTemp4 = document.querySelector('#buttonTemp4')
+let lButtonTemp5 = document.querySelector('#buttonTemp5')
+    let lButtonTemp6 = document.querySelector('#buttonTemp6')
+
+let VarSpeed1 = document.createElement('div')
+        VarSpeed1.textContent = 'Kilometry na godzinę na mile na godzinę'
+        VarSpeed1.id = 'buttonSpeed1'
+        VarSpeed1.className = 'button'
+let VarSpeed2 = document.createElement('div')
+        VarSpeed2.textContent = 'Mile na godzinę na kilometry na godzinę'
+        VarSpeed2.id = 'buttonSpeed2'
+        VarSpeed2.className = 'button'
+
+
+let lButtonSpeed1 = document.getElementById('buttonSpeed1')
+    let lButtonSpeed2 = document.getElementById('buttonSpeed2')
+let lButtonSpeed3 = document.getElementById('buttonSpeed3')
+    let lButtonSpeed4 = document.getElementById('buttonSpeed4')
+let lButtonSpeed5 = document.getElementById('buttonSpeed5')
+    let lButtonSpeed6 = document.getElementById('buttonSpeed6')
+
 
 
 let fahrenheit
 let celsius
 let kelwin
 let temperature
+let reset
 
 
+        reset = () =>{
+            one.textContent = '_ _ _ _ _ _'
+            two.textContent = '_ _ _ _ _ _'
+            result.textContent = `Najpierw wybierz jednostki`
+        }
 
         temperature = () =>{
         if(one.textContent === 'Celsjuszy' && two.textContent === `Fahrenheity`){
@@ -77,43 +109,70 @@ let temperature
 
         }
     }
+
+    buttonNav1.addEventListener('click', function(){
+        if(lButtonTemp1.textContent != 'Celsjusze na Fahrenheity'){
+         reset()  
+        }
+        listInnerClass.innerHTML = ''
+        listInnerClass.appendChild(lButtonTemp1)
+        listInnerClass.appendChild(lButtonTemp2)
+        listInnerClass.appendChild(lButtonTemp3)
+        listInnerClass.appendChild(lButtonTemp4)
+        listInnerClass.appendChild(lButtonTemp5)
+        listInnerClass.appendChild(lButtonTemp6)
+        })
+    buttonNav2.addEventListener('click', function(){
+            reset()
+            listInnerClass.innerHTML = ''  
+            listInnerClass.appendChild(VarSpeed1)
+            listInnerClass.appendChild(VarSpeed2)
+    
         
-    convBtn.addEventListener('click',temperature)   
+    
+        })
 
-    lButton1.addEventListener('click', function() {
-        console.log('C to F')
-        one.textContent = 'Celsjuszy'
-        two.textContent = 'Fahrenheity'
-        result.textContent = `_ _ _ _ `
-    })
-    lButton2.addEventListener('click', function() {
-        console.log('F to C')
-        one.textContent = 'Fahrenheitów'
-        two.textContent = 'Celsjusze'
-        result.textContent = `_ _ _ _ `
-    })
-    lButton3.addEventListener('click', function() {
-        console.log('C to K')
-        one.textContent = 'Celsjuszy'
-        two.textContent = 'Kelwiny'
-        result.textContent = `_ _ _ _ `
-    })
-    lButton4.addEventListener('click', function() {
-        console.log('K to C')
-        one.textContent = 'Kelwinów'
-        two.textContent = 'Celsjusze'
-        result.textContent = `_ _ _ _ `
-    })
-    lButton5.addEventListener('click', function() {
-        console.log('F to K')
-        one.textContent = 'Fahrenheitów'
-        two.textContent = 'Kelwiny'
-        result.textContent = `_ _ _ _ `
-    })
-    lButton6.addEventListener('click', function() {
-        console.log('K to F')
-        one.textContent = 'Kelwinów'
-        two.textContent = 'Fahrenheity'
-        result.textContent = `_ _ _ _ `
-    }) 
+convBtn.addEventListener('click',temperature)   
 
+            lButtonTemp1.addEventListener('click', function() {
+                console.log('C to F')
+                one.textContent = 'Celsjuszy'
+                two.textContent = 'Fahrenheity'
+                result.textContent = `_ _ _ _ `
+            })
+            lButtonTemp2.addEventListener('click', function() {
+                console.log('F to C')
+                one.textContent = 'Fahrenheitów'
+                two.textContent = 'Celsjusze'
+                result.textContent = `_ _ _ _ `
+            })
+            lButtonTemp3.addEventListener('click', function() {
+                console.log('C to K')
+                one.textContent = 'Celsjuszy'
+                two.textContent = 'Kelwiny'
+                result.textContent = `_ _ _ _ `
+            })
+            lButtonTemp4.addEventListener('click', function() {
+                console.log('K to C')
+                one.textContent = 'Kelwinów'
+                two.textContent = 'Celsjusze'
+                result.textContent = `_ _ _ _ `
+            })
+            lButtonTemp5.addEventListener('click', function() {
+                console.log('F to K')
+                one.textContent = 'Fahrenheitów'
+                two.textContent = 'Kelwiny'
+                result.textContent = `_ _ _ _ `
+            })
+            lButtonTemp6.addEventListener('click', function() {
+                console.log('K to F')
+                one.textContent = 'Kelwinów'
+                two.textContent = 'Fahrenheity'
+                result.textContent = `_ _ _ _ `
+            }) 
+            lButtonSpeed1.addEventListener('click', function(){
+                one.textContent = 'Kilometrów na godzinę'
+                two.textContent = 'Mile na godzinę'
+                result.textContent = `_ _ _ _ `
+            })
+        

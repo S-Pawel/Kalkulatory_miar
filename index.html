@@ -16,28 +16,29 @@
         <header>
                 <h1>Kalkulator miar online</h1>
             <nav>
-                <div class="menu">Temperatura</div>
-                <div class="menu">Prędkość</div>
-                <div class="menu">Waga</div>
-                <div class="menu">Długość</div>
-                <div class="menu">Powierzchnia</div>
+                <div class="menu" id="buttonNav1">Temperatura</div>
+                <div class="menu" id="buttonNav2">Prędkość</div>
+                <div class="menu" id="buttonNav3">Waga</div>
+                <div class="menu" id="buttonNav4">Długość</div>
+                <div class="menu" id="buttonNav5">Powierzchnia</div>
             
 
             </nav>
         </header>
         <div class="window">
-            <div class="list">Lista <br>dostępnych konwersji<br> <br>
-
-                <div class="button" id="button1">Celsjusze na Fahrenheity</div>
-                <div class="button" id="button2">Fahrenheity na Celsjusze</div>
-                <div class="button" id="button3">Celsjusze na Kelwiny</div>
-                <div class="button" id="button4">Kelwiny na Celsjusze</div>
-                <div class="button" id="button5">Fahrenheity na Kelwiny</div>
-                <div class="button" id="button6">Kelwiny na Fahrenheity</div>
+            <div class="list">Lista <br>dostępnych konwersji <br><br>
+                <div id="listInner">
+                    <div class="button" id="buttonTemp1">Celsjusze na Fahrenheity</div>
+                    <div class="button" id="buttonTemp2">Fahrenheity na Celsjusze</div>
+                    <div class="button" id="buttonTemp3">Celsjusze na Kelwiny</div>
+                    <div class="button" id="buttonTemp4">Kelwiny na Celsjusze</div>
+                    <div class="button" id="buttonTemp5">Fahrenheity na Kelwiny</div>
+                    <div class="button" id="buttonTemp6">Kelwiny na Fahrenheity</div>
+                </div>
             </div>
             <div class="main"> 
                 <h2>Konwertowanie z 
-                    <span class="one">_ _ _ _ _ _</span> na <span class="two"> _ _ _ _ _ _ </span> 
+                    <span class="one">_ _ _ _ _ _</span> na <span class="two">_ _ _ _ _ _</span> 
                 </h2> 
                 <br> <br>Podaj liczbę stopni: <br><br>
                     <input type="number" id="conNumber" placeholder="Wpisz liczbę">

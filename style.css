@@ -68,12 +68,8 @@ nav
 }
         .button
         {
-            padding: 10px;
+            padding: 12px;
         }   
-                .button:first-child
-                {
-                    padding-top: 50px;
-                }
                 .button:hover
                 {
                     background-color: #cdcdcd;
