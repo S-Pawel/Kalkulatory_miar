@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mapa z GeoJSON</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="map" style="height: 500px;"></div>
+
+  <script>
+    $(document).ready(function() {
+      // Stworzenie mapy Leaflet i scenerowanie widoku dla Lublina
+      var map = L.map('map').setView([51.2465, 22.5684], 13);
+
+      // Dodanie mapy tła z OpenStreetMap
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+      // Wczytanie danych GeoJSON za pomocą AJAX
+      $.getJSON('TestLayer.geojson', function(data) {
+        // Stworzenie warstwy GeoJSON i dodanie jej do mapy
+        L.geoJSON(data).addTo(map);
+      });
+    });
+  </script>
+</body>
+</html>
