@@ -23,14 +23,35 @@
             aria-controls="mainmenu" aria-expanded="false" aria-label="switchNavButton">
                 <span class="navbar-toggler-icon">X</span>
             </button>
-
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ml-auto" id="rightBottoms">
-                    <li class="nav-item mr-3"><a>Warstwy</a></li>
-                    <li class="nav-item mr-3"><a>Podkład</a></li>
-                    <li class="nav-item mr-3"><a>Mapa</a></li>
-                    <li class="nav-item mr-3"><a>Zdjęcia</a></li>
-                    <li class="nav-item mr-3"><a>O projekcie</a></li>
+                    <li class="nav-item dropdown mr-3">
+                        <a class="nav-item dropdown-toggle" data-toggle="dropdown" 
+                        role="button" aria-expanded="false" id="submenuLayers">Warstwy</a>
+                            <div class="dropdown-menu" aria-labelledby="submenuLayers">
+                                <a class="dropdown-item" href="#">Lasy</a>
+                                <a class="dropdown-item" href="#">Zabudowa</a>
+                                <a class="dropdown-item" href="#">Drogi</a>
+                            </div>
+                    </li>
+                    <li class="nav-item dropdown mr-3">
+                        <a class="nav-item dropdown-toggle" data-toggle="dropdown" 
+                        role="button1" aria-expanded="false" id="submenuUnderlay">Podkład</a>
+                            <div class="dropdown-menu" aria-labelledby="submenuUnderlay">
+                                <a class="dropdown-item" href="#">Leaflet</a>
+                                <a class="dropdown-item" href="#">OpenLayers</a>
+                            </div>
+                    </li>
+                    <li class="nav-item dropdown mr-3">
+                        <a class="nav-item dropdown-toggle" data-toggle="dropdown" 
+                        role="button1" aria-expanded="false" id="submenuMap">Mapa</a>
+                            <div class="dropdown-menu" aria-labelledby="submenuMap">
+                                <a class="dropdown-item" href="#">1938 Wektor</a>
+                                <a class="dropdown-item" href="#">1938 Raster</a>
+                            </div>
+                    </li>
+                    <li class="nav-item mr-3" href="#"><a>Zdjęcia</a></li>
+                    <li class="nav-item mr-3" href="#"><a>O projekcie</a></li>
                 </ul>
             </div>
         </nav>
@@ -46,13 +67,13 @@
     
         <footer class="footer py-1">
             <div class="container text-center">
-            <p>© 2023 Nazwa Twojej Strony</p>
+            <p>©Strona stworzona przez S-Pawel</p>
             </div>
         </footer>
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" 
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -61,7 +82,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function() {
-          var map = L.map('map').setView([51.2465, 22.5684], 13);
+          var map = L.map('map').setView([51.2158, 22.6987], 13);
           L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
           $.getJSON('TestLayer.geojson', function(data) {
             L.geoJSON(data).addTo(map);
