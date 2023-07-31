@@ -1,0 +1,150 @@
+body{
+
+    margin: 0;
+    background-image: url(map_one.PNG);
+    font-family: Arial, Helvetica, sans-serif;
+}
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+footer{
+    clear: both;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #941d1d;
+}
+
+#allContent {
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    height: 100%;
+    min-height: 400px;
+}
+#allContentWithoutFooter{
+    padding-bottom: 80px;
+}
+
+header{
+    clear: both;
+    background-color: #941d1d;
+    font-weight: 700;
+    height: 50px;
+    font-size: 30px;
+    white-space: nowrap;
+    width: 100%;
+}
+#headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    
+}
+#headerName{
+    float: left;
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+}
+#toRight{
+    float: right;
+    margin: 8px;
+    margin-right: 5px;
+    display: flex;
+    background-color: #941d1d;
+    white-space: nowrap;
+}
+
+.headerNavButton:first-child{
+    border-left: 3px solid transparent;
+}
+.headerNavButton:hover{
+    background-color: azure;
+    cursor: pointer;
+}
+
+
+
+
+.mainsButton {
+    background-color: #b9b9b9ad;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 70vw;
+    min-width: 250px;
+    max-width: 1150px;
+    margin:auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+}
+.mainsButton > a {
+    display: block;
+    height: 200px;
+    width: 200px;
+    justify-content: space-between;
+    min-width: 200px;
+    text-align: center;
+    margin: 60px;
+}
+.mainButton{
+    background-color: #c3c530ad;
+    width: 200px;
+    height: 200px;
+    font-size: 30px;
+    text-align: center;
+}
+.mainButton:hover{
+    background-color: #969695ad;
+    cursor: pointer;
+} 
+.headerNavButton{
+    padding-right: 30px;
+    padding-left: 30px;
+    border-left: 3px solid rgb(0, 0, 0);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap
+}
+.headerNavButton:hover .dropdown-content{
+    max-height: 1000px;
+}
+
+.dropdown-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #941d1d;
+}
+.dropdown-content > div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.dropdown-content > div:hover{
+    background-color: azure;
+    cursor: pointer;
+}
